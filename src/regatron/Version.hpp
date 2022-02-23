@@ -2,8 +2,8 @@
 #include "Regatron.hpp"
 
 #include "serialiolib.h" // NOLINT
-#include <fmt/format.h>
-#include <log/Logger.hpp>
+#include "fmt/format.h"
+#include "log/Logger.hpp"
 
 #include <string>
 
@@ -31,5 +31,12 @@ class Version {
 
     void ReadDllVersion();
     void ReadDSPVersion();
+
+  private:
+    void ReadDSPChip();
+    void ReadDSPFirmware();
+    void ReadDSPBootloader();
+    void ReadPLDFirmware();
+    void ReadIBCFirmware();
 };
 } // namespace Regatron
